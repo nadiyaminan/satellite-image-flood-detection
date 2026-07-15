@@ -52,7 +52,7 @@ class FloodDetector:
             "label": label,
             "confidence": confidence,
             "model_type": self.model_type,
-            "message": "Heuristic fallback used because a trained model was not found.",
+            "message": "Fallback mode is active because no trained model file is available yet. Add your .keras or .h5 model to the models folder to enable full inference.",
         }
 
     def predict(self, image_bytes: bytes) -> Dict[str, Any]:
