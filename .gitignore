@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+.env
+.venv/
+venv/
+node_modules/
+dist/
+build/
+.pytest_cache/
+coverage/
+*.keras
+*.h5
+*.pb
