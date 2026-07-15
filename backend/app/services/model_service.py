@@ -21,7 +21,11 @@ class FloodDetector:
             if path.exists():
                 return str(path)
 
+        repo_root = Path(__file__).resolve().parents[2]
         candidates = [
+            repo_root / "models" / "vgg16_damage_detection.h5",
+            repo_root / "models" / "flood_detection_model.keras",
+            repo_root / "models" / "flood_detection_model.h5",
             Path("models/vgg16_damage_detection.h5"),
             Path("models/flood_detection_model.keras"),
             Path("models/flood_detection_model.h5"),
@@ -30,7 +34,7 @@ class FloodDetector:
             if candidate.exists():
                 return str(candidate)
 
-        return str(Path("models/vgg16_damage_detection.h5")) if Path("models/vgg16_damage_detection.h5").exists() else None
+        return None
 
     def _load_model(self) -> None:
         if not self.model_path:

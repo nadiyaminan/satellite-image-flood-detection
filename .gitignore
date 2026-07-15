@@ -13,7 +13,10 @@ build/
 .pytest_cache/
 coverage/
 *.keras
+!models/flood_detection_model.keras
 *.h5
+!models/vgg16_damage_detection.h5
+!models/flood_detection_model.h5
 *.pb
 .DS_Store
 
