@@ -9,12 +9,33 @@ from PIL import Image
 
 class FloodDetector:
     def __init__(self, model_path: str | None = None):
-        self.model_path = model_path or os.getenv("MODEL_PATH", "models/flood_detection_model.keras")
+        self.model_path = self._resolve_model_path(model_path)
         self.model = None
         self.model_type = "heuristic"
         self._load_model()
 
+    def _resolve_model_path(self, model_path: str | None = None) -> str | None:
+        explicit_path = model_path or os.getenv("MODEL_PATH")
+        if explicit_path:
+            path = Path(explicit_path)
+            if path.exists():
+                return str(path)
+
+        candidates = [
+            Path("models/vgg16_damage_detection.h5"),
+            Path("models/flood_detection_model.keras"),
+            Path("models/flood_detection_model.h5"),
+        ]
+        for candidate in candidates:
+            if candidate.exists():
+                return str(candidate)
+
+        return str(Path("models/vgg16_damage_detection.h5")) if Path("models/vgg16_damage_detection.h5").exists() else None
+
     def _load_model(self) -> None:
+        if not self.model_path:
+            return
+
         path = Path(self.model_path)
         if not path.exists():
             return
