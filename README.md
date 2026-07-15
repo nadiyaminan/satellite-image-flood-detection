@@ -48,3 +48,14 @@ The backend automatically uses it when available. If no trained model is present
 - Backend: Render, Railway, Fly.io, Azure App Service
 - Frontend: Vercel or Netlify
 - Full stack: Docker Compose
+
+## Hosting setup
+
+1. Deploy the backend to Render using the included [render.yaml](render.yaml).
+2. Copy the deployed backend URL.
+3. In Vercel or Netlify, set the environment variable VITE_API_URL to the backend URL.
+4. Redeploy the frontend.
+
+Example:
+- Backend URL: https://your-backend-app.onrender.com
+- Frontend variable: VITE_API_URL=https://your-backend-app.onrender.com
