@@ -38,18 +38,24 @@ class FloodDetector:
 
     def _load_model(self) -> None:
         if not self.model_path:
+            print("Model path is not configured or resolved.")
             return
 
         path = Path(self.model_path)
         if not path.exists():
+            print(f"Model file does not exist at: {path}")
             return
 
         try:
             import tensorflow as tf
-
+            print(f"Attempting to load Keras model from: {path} using TensorFlow {tf.__version__}")
             self.model = tf.keras.models.load_model(str(path))
             self.model_type = "tensorflow"
-        except Exception:
+            print("Model loaded successfully!")
+        except Exception as exc:
+            import traceback
+            print(f"Failed to load TensorFlow model: {exc}")
+            traceback.print_exc()
             self.model = None
             self.model_type = "heuristic"
 
