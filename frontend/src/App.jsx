@@ -1,6 +1,10 @@
 import { useState } from 'react';
 
-const API_URL = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:8001').replace(/\/$/, '');
+let apiBase = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+if (apiBase && !apiBase.startsWith('http://') && !apiBase.startsWith('https://')) {
+  apiBase = `https://${apiBase}`;
+}
+const API_URL = apiBase.replace(/\/$/, '');
 
 function App() {
   const [file, setFile] = useState(null);
