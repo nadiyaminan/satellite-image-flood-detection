@@ -191,7 +191,7 @@ As part of the final-year team project, my contributions included:
 
 **Nadiya Minan**
 
-B.Tech in Artificial Intelligence & Data Science
+B.Tech in Artificial Intelligence & Data Science Graduate
 
 GitHub: https://github.com/nadiyaminan
 
