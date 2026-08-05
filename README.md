@@ -199,7 +199,7 @@ B.Tech in Artificial Intelligence & Data Science
 
 GitHub: https://github.com/nadiyaminan
 
-LinkedIn: linkedin.com/in/nadiyaminan
+LinkedIn: https://linkedin.com/in/nadiyaminan
 
 ---
 
