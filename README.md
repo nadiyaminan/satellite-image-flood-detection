@@ -1,61 +1,152 @@
-# Flood Detection Platform
+# Satellite Image Flood Detection using VGG19
 
-This project turns the flood detection notebook into a production-style application with:
+## Overview
 
-- a FastAPI backend for image inference
-- a modern React frontend for uploading images and viewing predictions
-- deployment-ready files for local, Docker, and cloud hosting
+This project is a deep learning–based flood detection platform that analyzes satellite images to classify flooded and non-flooded regions. It combines a VGG19 convolutional neural network with a FastAPI backend and a React frontend, providing a complete web application for image-based flood prediction.
 
-## Project structure
+> **Project Note:** This repository contains a portfolio copy of a final-year team project and is maintained to showcase my contribution to the implementation and deployment.
 
-- backend/app: FastAPI service and model loading logic
-- frontend/src: React UI
-- models/: place your trained model file here
-- data/: the dataset used during experimentation
+---
 
-## Quick start
+## Features
 
-### 1. Backend
+- Flood detection using satellite imagery
+- Deep learning with VGG19
+- FastAPI backend for inference
+- React frontend for image upload and prediction
+- Automatic model loading
+- Prediction confidence display
+- Deployment-ready architecture
+- Docker support
+- Cloud deployment support
+
+---
+
+## Technologies Used
+
+- Python
+- TensorFlow / Keras
+- VGG19
+- FastAPI
+- React
+- JavaScript
+- HTML
+- CSS
+- OpenCV
+- NumPy
+- Docker
+
+---
+
+## Project Structure
+
+```
+backend/
+frontend/
+models/
+data/
+requirements.txt
+render.yaml
+```
+
+---
+
+## Installation
+
+### Backend
 
 ```bash
 python -m venv .venv
-.venv\Scripts\activate
+source .venv/bin/activate      # macOS/Linux
+
 pip install -r requirements.txt
+
 uvicorn backend.app.main:app --reload --port 8000
 ```
 
-### 2. Frontend
+### Frontend
 
 ```bash
 cd frontend
+
 npm install
+
 npm run dev
 ```
 
-Then open the local Vite URL shown in the terminal.
+---
 
-## Model integration
+## Model Integration
 
-Place your trained model file in the models folder and name it one of:
+Place your trained model inside the `models` directory using either of these names:
 
-- models/flood_detection_model.keras
-- models/flood_detection_model.h5
+- flood_detection_model.keras
+- flood_detection_model.h5
 
-The backend automatically uses it when available. If no trained model is present, it falls back to a lightweight heuristic so the app still runs.
+The backend automatically loads the trained model. If no model is found, it falls back to a lightweight heuristic for demonstration purposes.
 
-## Deployment ideas
+---
 
-- Backend: Render, Railway, Fly.io, Azure App Service
-- Frontend: Vercel or Netlify
-- Full stack: Docker Compose
+## Deployment
 
-## Hosting setup
+Backend
 
-1. Deploy the backend to Render using the included [render.yaml](render.yaml).
-2. Copy the deployed backend URL.
-3. In Vercel or Netlify, set the environment variable VITE_API_URL to the backend URL.
-4. Redeploy the frontend.
+- Render
+- Railway
+- Fly.io
+- Azure App Service
 
-Example:
-- Backend URL: https://your-backend-app.onrender.com
-- Frontend variable: VITE_API_URL=https://your-backend-app.onrender.com
+Frontend
+
+- Vercel
+- Netlify
+
+Containerization
+
+- Docker
+- Docker Compose
+
+---
+
+## Screenshots
+
+Add screenshots of:
+
+- Home Page
+- Image Upload
+- Prediction Result
+- Model Output
+
+---
+
+## Future Enhancements
+
+- Real-time satellite image analysis
+- Multi-class flood severity prediction
+- GIS integration
+- Improved model accuracy
+- Mobile application support
+
+---
+
+## My Contribution
+
+- Deep learning implementation
+- Model integration
+- Testing and evaluation
+- Web application development
+- Project deployment and documentation
+
+---
+
+## Author
+
+**Nadiya Minan**
+
+B.Tech Artificial Intelligence & Data Science
+
+---
+
+## License
+
+This project is intended for educational and research purposes.
