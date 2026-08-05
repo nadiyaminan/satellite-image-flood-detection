@@ -6,7 +6,6 @@ Satellite Image Flood Detection is a deep learning–based web application that 
 
 This project demonstrates the practical application of artificial intelligence, computer vision, and web technologies for disaster monitoring and environmental analysis.
 
-> **Project Note:** This repository is maintained as a portfolio copy of a final-year team project. The original team repository is linked below. This repository showcases my contribution to the project's implementation, deployment, and documentation.
 
 ---
 
