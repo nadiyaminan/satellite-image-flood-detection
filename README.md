@@ -15,9 +15,6 @@ This project demonstrates the practical application of artificial intelligence, 
 🌐 **Live Application**  
 https://satellite-image-flood-detection-using-zqza.onrender.com/
 
-📂 **Original Team Repository**  
-https://github.com/farizest/Satellite-Image-Flood-Detection-using-VGGNET-19
-
 📂 **My Portfolio Repository**  
 https://github.com/nadiyaminan/satellite-image-flood-detection
 
