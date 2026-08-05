@@ -1,43 +1,208 @@
-Flood Detection Platform
-This project turns the flood detection notebook into a production-style application with:
+# Satellite Image Flood Detection
 
-a FastAPI backend for image inference
-a modern React frontend for uploading images and viewing predictions
-deployment-ready files for local, Docker, and cloud hosting
-Project structure
-backend/app: FastAPI service and model loading logic
-frontend/src: React UI
-models/: place your trained model file here
-data/: the dataset used during experimentation
-Quick start
-1. Backend
+## Overview
+
+Satellite Image Flood Detection is a deep learning–based web application that analyzes satellite imagery to classify flooded and non-flooded regions. The platform combines a convolutional neural network (CNN), a FastAPI backend, and a React frontend to provide an intuitive interface for image upload and real-time flood prediction.
+
+This project demonstrates the practical application of artificial intelligence, computer vision, and web technologies for disaster monitoring and environmental analysis.
+
+> **Project Note:** This repository is maintained as a portfolio copy of a final-year team project. The original team repository is linked below. This repository showcases my contribution to the project's implementation, deployment, and documentation.
+
+---
+
+## Live Demo & Repository
+
+🌐 **Live Application**  
+https://satellite-image-flood-detection-using-zqza.onrender.com/
+
+📂 **Original Team Repository**  
+https://github.com/farizest/Satellite-Image-Flood-Detection-using-VGGNET-19
+
+📂 **My Portfolio Repository**  
+https://github.com/nadiyaminan/satellite-image-flood-detection
+
+---
+
+## Features
+
+- Satellite image flood detection
+- AI-powered image classification
+- Deep learning–based prediction
+- FastAPI backend
+- React frontend
+- Image upload interface
+- Automatic model loading
+- Real-time prediction results
+- Prediction confidence display
+- Docker support
+- Deployment-ready architecture
+- Cloud hosting support
+
+---
+
+## Technologies Used
+
+- Python
+- TensorFlow / Keras
+- FastAPI
+- React
+- JavaScript
+- HTML
+- CSS
+- OpenCV
+- NumPy
+- Docker
+
+---
+
+## Project Structure
+
+```text
+backend/
+frontend/
+models/
+data/
+requirements.txt
+render.yaml
+README.md
+```
+
+---
+
+## Installation
+
+### Backend
+
+```bash
 python -m venv .venv
-.venv\Scripts\activate
+
+source .venv/bin/activate      # macOS/Linux
+# OR
+.venv\Scripts\activate         # Windows
+
 pip install -r requirements.txt
+
 uvicorn backend.app.main:app --reload --port 8000
-2. Frontend
+```
+
+### Frontend
+
+```bash
 cd frontend
+
 npm install
+
 npm run dev
-Then open the local Vite URL shown in the terminal.
+```
 
-Model integration
-Place your trained model file in the models folder and name it one of:
+Open the local Vite development URL displayed in the terminal.
 
+---
+
+## Model Integration
+
+Place the trained model inside the **models** directory using one of the following names:
+
+```
 models/flood_detection_model.keras
+```
+
+or
+
+```
 models/flood_detection_model.h5
-The backend automatically uses it when available. If no trained model is present, it falls back to a lightweight heuristic so the app still runs.
+```
 
-Deployment ideas
-Backend: Render, Railway, Fly.io, Azure App Service
-Frontend: Vercel or Netlify
-Full stack: Docker Compose
-Hosting setup
-Deploy the backend to Render using the included render.yaml.
-Copy the deployed backend URL.
-In Vercel or Netlify, set the environment variable VITE_API_URL to the backend URL.
-Redeploy the frontend.
-Example:
+The backend automatically loads the trained model. If no trained model is available, it falls back to a lightweight heuristic so the application remains functional.
 
-Backend URL: https://your-backend-app.onrender.com
-Frontend variable: VITE_API_URL=https://your-backend-app.onrender.com
+---
+
+## Deployment
+
+### Backend
+
+- Render
+- Railway
+- Fly.io
+- Azure App Service
+
+### Frontend
+
+- Vercel
+- Netlify
+
+### Containerization
+
+- Docker
+- Docker Compose
+
+---
+
+## Screenshots
+
+Add screenshots of:
+
+- Home Page
+- Image Upload Interface
+- Flood Prediction Result
+- Model Output
+
+---
+
+## Future Enhancements
+
+- Real-time satellite image analysis
+- Multi-class flood severity prediction
+- GIS integration
+- Improved model accuracy
+- Mobile application support
+- Performance optimization
+- Cloud-based monitoring dashboard
+
+---
+
+## My Contribution
+
+As part of the final-year team project, my contributions included:
+
+- Deep learning model implementation
+- Image preprocessing and testing
+- Model integration
+- Web application development
+- Deployment support
+- Documentation and project presentation
+
+---
+
+## Skills Demonstrated
+
+- Artificial Intelligence
+- Deep Learning
+- Computer Vision
+- Image Classification
+- TensorFlow
+- FastAPI
+- React
+- Python
+- Web Development
+- REST APIs
+- Git
+- GitHub
+
+---
+
+## Author
+
+**Nadiya Minan**
+
+B.Tech in Artificial Intelligence & Data Science
+
+GitHub: https://github.com/nadiyaminan
+
+LinkedIn: *(Add your LinkedIn profile URL here)*
+
+---
+
+## License
+
+This project is intended for educational and research purposes.
